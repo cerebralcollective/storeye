@@ -1,0 +1,33 @@
+{
+  "name": "storeye-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^5.0.0",
+    "aws-amplify": "^6.0.0",
+    "axios": "^1.4.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.0.0",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.4.3",
+    "@vitejs/plugin-react": "3.1.0",
+    "jsdom": "^27.2.0",
+    "typescript": "4.9.5",
+    "vite": "4.4.9",
+    "vitest": "1.4.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@types/node": "18.16.19",
+    "@types/jsdom": "16.2.14"
+  }
+}

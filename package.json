@@ -1,0 +1,12 @@
+{
+  "name": "storeye-root",
+  "private": true,
+  "scripts": {
+    "cdk:install": "cd cdk && npm install",
+    "frontend:install": "cd frontend && npm install",
+    "deploy": "cd cdk && npm run build && cdk deploy --require-approval never"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1"
+  }
+}
