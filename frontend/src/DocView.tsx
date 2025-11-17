@@ -52,7 +52,6 @@ function renderValue(value: any, level: number = 0): JSX.Element {
       <ul className={`list-none ${indent} space-y-1`}>
         {value.map((item, i) => (
           <li key={i} className="flex items-start">
-            <span className="text-blue-600 mr-2">•</span>
             <div className="flex-1">{renderValue(item, level + 1)}</div>
           </li>
         ))}
@@ -64,10 +63,10 @@ function renderValue(value: any, level: number = 0): JSX.Element {
     <div className={`${indent} space-y-2`}>
       {Object.entries(value).map(([k, v]) => (
         <div key={k}>
-          <div className={`${levelClasses[Math.min(level + 1, 2)]}`}>
-            {k.replace(/_/g, ' ')}:
-          </div>
-          <div className="mt-1">{renderValue(v, level + 1)}</div>
+
+          {k.replace(/_/g, ' ')}:
+
+          {renderValue(v, level + 1)}
         </div>
       ))}
     </div>
@@ -269,12 +268,6 @@ export default function DocView() {
             <div className="flex-1 bg-white p-8 rounded-xl shadow-md border border-gray-200">
               {currentDocType && currentDocType === activeTab ? (
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                    {currentDocType}
-                    <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                      Active
-                    </span>
-                  </h2>
                   {renderInferenceResult(doc.inference_result)}
                 </div>
               ) : (

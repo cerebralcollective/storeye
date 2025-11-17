@@ -47,6 +47,8 @@ cd ..
 # Install frontend dependencies
 cd frontend
 npm install
+rm -rf node_modules/.vite
+npm run dev
 cd ..
 ```
 
